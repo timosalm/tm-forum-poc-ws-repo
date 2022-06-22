@@ -89,9 +89,9 @@ public class OpenAPI2SpringBoot implements CommandLineRunner {
     @Bean
     public OpenAPI springShopOpenAPI() {
         return new OpenAPI()
-                .info(new Info().title("TMF Product Catalog Management API")
+                .info(new Info().title("TMF Product Catalog Management API of the Swedish market")
                         .description("## TMF API Reference: TMF620 - Product Catalog Management\n\n### Release" +
-                                " : 20.5 - March 2021\n\nProduct Catalog API is one of Catalog Management API" +
+                                " : 20.x - June 2022\n\nProduct Catalog API is one of Catalog Management API" +
                                 " Family. Product Catalog API goal is to provide a catalog of products. \n\n###" +
                                 " Operations\nProduct Catalog API performs the following operations on the resources" +
                                 " :\n- Retrieve an entity or a collection of entities depending on filter criteria\n" +
