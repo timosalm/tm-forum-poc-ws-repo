@@ -1,0 +1,9 @@
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name:  tmf-apis-system
+  description: TMF APIs
+  annotations:
+    'backstage.io/techdocs-ref': dir:.
+spec:
+  owner: team-tmf-product-catalog
