@@ -1,0 +1,22 @@
+apiVersion: carto.run/v1alpha1
+kind: Workload
+metadata:
+  name: product-catalog-management-api-java
+  namespace: prod-w05-s036
+  labels:
+    app.kubernetes.io/part-of: tmf-product-catalog-management-api-service
+    apps.tanzu.vmware.com/workload-type: web
+    apps.tanzu.vmware.com/has-tests: true
+    vodafone.com/check-api-conformance: "true"
+spec:
+  source:
+    git:
+      url: https://github.com/tsalm-pivotal/tm-forum-poc-ws-repo.git
+      ref:
+        branch: prod-w05-s036-314b9692-caa4-45cc-8d58-fcd9e629336f
+  serviceClaims:
+    - name: db
+      ref:
+        apiVersion: services.apps.tanzu.vmware.com/v1alpha1
+        kind: ResourceClaim
+        name: mongodb-binding-compatible
